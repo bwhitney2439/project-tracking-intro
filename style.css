@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+:root {
+  /* ### Secondary */
+
+  --very-dark-blue: hsl(230, 29%, 20%);
+  --dark-grayish-blue: hsl(230, 11%, 40%);
+  --grayish-blue: hsl(231, 7%, 65%);
+  --light-grayish-blue: #eef3f6;
+
+  /* ### Primary */
+
+  --red: hsl(0, 100%, 68%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.col {
+  width: 100%;
+  overflow: hidden;
+}
+
+.col:nth-child(2) {
+  height: 239px;
+}
+
+p,
+h1 {
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--very-dark-blue);
+}
+
+h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 5px;
+  color: #242942;
+  mix-blend-mode: normal;
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+a:hover:not(.login) {
+  border-bottom: 1px solid var(--very-dark-blue);
+}
+
+.login:hover {
+  border-bottom: 1px solid var(--grayish-blue);
+}
+
+button {
+  outline: none;
+}
+
+.illustration-image {
+  width: 482px;
+  height: 239px;
+  margin: auto;
+}
+
+.bg-shape {
+  position: absolute;
+  z-index: -1;
+  background: #edf2f6;
+  border-radius: 0px 0px 0px 60px;
+  width: 50%;
+  height: 425px;
+  top: 0;
+  right: 0;
+}
+
+nav {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 38px 32px 64px 32px;
+}
+
+nav .logo {
+  width: 24px;
+  height: 24px;
+}
+
+ul {
+  display: none;
+}
+
+main {
+  padding: 87px 32px 0 32px;
+}
+
+h3 {
+  font-family: "Barlow Condensed";
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 5px;
+  color: #242942;
+  mix-blend-mode: normal;
+  display: inline-block;
+}
+main span {
+  display: inline-flex;
+  background-color: var(--very-dark-blue);
+  border-radius: 12.5px;
+  color: white;
+  padding: 3px 10px 4px 11px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  margin-right: 16px;
+}
+
+main h3 {
+  opacity: 0.5;
+}
+
+main h1 {
+  margin: 16px 0;
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #242942;
+}
+
+main p {
+  font-family: "Barlow";
+  width: 267px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  color: #242942;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  margin-bottom: 27px;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 92px;
+}
+
+.button-container button {
+  background: #ff5e5e;
+  border-radius: 5px;
+  width: 153px;
+  height: 40px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.933333px;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.button-container h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.5px;
+  color: #242942;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+@media (min-width: 1110px) {
+  html {
+    overflow: hidden;
+  }
+  .container {
+    width: 1110px;
+    height: 100vh;
+    flex-flow: row-reverse wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col {
+    width: 50%;
+    height: 100%;
+  }
+  .col:nth-child(2) {
+    height: 100%;
+  }
+
+  .bg-shape {
+    position: absolute;
+    z-index: -1;
+    background: #edf2f6;
+    border-radius: 0px 0px 0px 60px;
+    width: 47%;
+    height: 427px;
+    left: unset;
+    right: 0;
+    top: 0px;
+  }
+
+  nav {
+    margin: 0;
+    width: 100%;
+    padding: 64px 0 162px 0;
+  }
+
+  nav .logo {
+    width: 32px;
+    height: 32px;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+  }
+
+  ul li:not(:nth-child(1)) {
+    display: flex;
+    margin-left: 42px;
+  }
+
+  ul li a {
+    text-decoration: none;
+    font-family: "Barlow Condensed";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: 1px;
+    color: #242942;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #242942;
+    mix-blend-mode: normal;
+    opacity: 0.15;
+  }
+
+  .login {
+    font-family: "Barlow Condensed";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: right;
+    letter-spacing: 1px;
+    color: #242942;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .illustration-image {
+    position: absolute;
+    width: 916px;
+    height: 455px;
+    top: 220px;
+    transform: translateX(60px);
+  }
+
+  main {
+    width: 470px;
+    padding: 0;
+  }
+
+  main h1 {
+    font-size: 64px;
+    line-height: 64px;
+    margin: 0 0 32px 0;
+    height: 100%;
+  }
+
+  main h3 {
+    margin-bottom: 20px;
+  }
+
+  main p {
+    margin-bottom: 64px;
+  }
+
+  .button-container h3 {
+    margin-bottom: 0;
+  }
+}

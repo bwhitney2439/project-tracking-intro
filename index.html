@@ -30,7 +30,7 @@
     <div class="container">
       <nav>
         <div class="logo"><img src="./images/logo.svg" alt="" /></div>
-        <ul>
+        <ul class="hide">
           <li>
             <a href="#">PRODUCT</a>
           </li>
@@ -48,7 +48,11 @@
           </li>
         </ul>
         <div class="mobile-menu">
-          <img src="./images/icon-hamburger.svg" alt="" />
+          <img
+            src="./images/icon-hamburger.svg"
+            alt=""
+            onclick="handleMenuClick()"
+          />
         </div>
       </nav>
 
@@ -72,5 +76,21 @@
         </main>
       </div>
     </div>
+
+    <script>
+      const navigationMenu = document.querySelector("ul");
+      const menuIcon = document
+        .querySelector(".mobile-menu")
+        .querySelector("img");
+      const handleMenuClick = () => {
+        navigationMenu.classList.toggle("hide");
+
+        if (navigationMenu.classList.contains("hide")) {
+          menuIcon.src = "./images/icon-hamburger.svg";
+        } else {
+          menuIcon.src = "./images/icon-close.svg";
+        }
+      };
+    </script>
   </body>
 </html>

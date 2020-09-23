@@ -41,9 +41,20 @@ body {
   height: 239px;
 }
 
-p,
+p {
+  font-family: "Barlow";
+  width: 267px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 26px;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+  margin-bottom: 27px;
+}
+
 h1 {
-  font-family: "Barlow", sans-serif;
+  font-family: Barlow Condensed;
   font-style: normal;
   font-weight: bold;
   font-size: 40px;
@@ -58,9 +69,10 @@ h3 {
   font-size: 15px;
   line-height: 18px;
   letter-spacing: 5px;
-  color: #242942;
+  color: var(--very-dark-blue);
   mix-blend-mode: normal;
   text-transform: uppercase;
+  display: inline-block;
 }
 
 img {
@@ -88,12 +100,13 @@ button {
   width: 482px;
   height: 239px;
   margin: auto;
+  transform: translateX(10px);
 }
 
 .bg-shape {
   position: absolute;
   z-index: -1;
-  background: #edf2f6;
+  background: var(--light-grayish-blue);
   border-radius: 0px 0px 0px 60px;
   width: 50%;
   height: 425px;
@@ -115,28 +128,68 @@ nav .logo {
 }
 
 ul {
+  position: absolute;
+  top: 100px;
+  left: 32px;
+  right: 32px;
+  z-index: 999;
+  text-align: center;
+  list-style-type: none;
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  padding: 24px 24px;
+}
+
+.hide {
   display: none;
+}
+
+ul li {
+  margin-bottom: 24px;
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+}
+
+.dot {
+  height: 1px;
+  width: 100%;
+  background-color: var(--grayish-blue);
+  opacity: 0.15;
+}
+
+ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  color: var(--very-dark-blue);
+  cursor: pointer;
+}
+
+.login {
+  font-family: Barlow Condensed;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  color: var(--very-dark-blue);
+  mix-blend-mode: normal;
+  opacity: 0.5;
 }
 
 main {
   padding: 87px 32px 0 32px;
 }
 
-h3 {
-  font-family: "Barlow Condensed";
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 18px;
-  letter-spacing: 5px;
-  color: #242942;
-  mix-blend-mode: normal;
-  display: inline-block;
-}
 main span {
   display: inline-flex;
   background-color: var(--very-dark-blue);
   border-radius: 12.5px;
-  color: white;
+  color: var(--light-grayish-blue);
   padding: 3px 10px 4px 11px;
   font-style: normal;
   font-weight: bold;
@@ -152,26 +205,7 @@ main h3 {
 
 main h1 {
   margin: 16px 0;
-  font-family: "Barlow Condensed";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 40px;
   text-transform: uppercase;
-  color: #242942;
-}
-
-main p {
-  font-family: "Barlow";
-  width: 267px;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 26px;
-  color: #242942;
-  mix-blend-mode: normal;
-  opacity: 0.75;
-  margin-bottom: 27px;
 }
 
 .button-container {
@@ -181,12 +215,12 @@ main p {
 }
 
 .button-container button {
-  background: #ff5e5e;
+  background: var(--red);
   border-radius: 5px;
   width: 153px;
   height: 40px;
   border: none;
-  color: white;
+  color: var(--light-grayish-blue);
   text-transform: uppercase;
   font-family: "Barlow Condensed";
   font-style: normal;
@@ -194,7 +228,6 @@ main p {
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.933333px;
-  color: #ffffff;
   margin-right: 20px;
 }
 
@@ -204,7 +237,7 @@ main p {
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 2.5px;
-  color: #242942;
+  color: var(--very-dark-blue);
   mix-blend-mode: normal;
   opacity: 0.5;
 }
@@ -251,13 +284,32 @@ main p {
     width: 32px;
     height: 32px;
   }
+
   ul {
-    display: flex;
     align-items: center;
+  }
+  ul {
+    position: unset;
+    display: flex;
+    right: 32px;
+    z-index: 999;
+    text-align: center;
     list-style-type: none;
+    background-color: transparent;
+    box-shadow: unset;
+    border-radius: 3px;
+    padding: 0;
   }
 
-  ul li:not(:nth-child(1)) {
+  nav ul li {
+    margin-bottom: 0;
+  }
+
+  .hide {
+    display: flex;
+  }
+
+  ul li:not(:first-child) {
     display: flex;
     margin-left: 42px;
   }
@@ -271,7 +323,8 @@ main p {
     line-height: 18px;
     text-align: right;
     letter-spacing: 1px;
-    color: #242942;
+
+    color: var(--very-dark-blue);
   }
 
   .dot {
@@ -316,6 +369,7 @@ main p {
   main h1 {
     font-size: 64px;
     line-height: 64px;
+
     margin: 0 0 32px 0;
     height: 100%;
   }
